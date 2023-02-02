@@ -1,10 +1,11 @@
 import Logo from "../the-simpson.png";
 import styled from "styled-components";
-export default function Welcome() {
+export default function Welcome(props) {
+  const {reqapi} = props
     return (
         <ContentLogo>
             <WelcomeText>Bienvenido, para poder utilizar las Frases pinche sobre la imagen</WelcomeText>
-            <ImageLogo src={Logo} alt="Logo" />
+            <ImageLogo src={Logo} alt="Logo" onClick={reqapi} />
         </ContentLogo>
     )
 }
